@@ -1,14 +1,15 @@
+
+<!DOCTYPE html>
 <style>
     .coep-logo {
     width: 100px; 
-    height: auto;
+    height: auto; 
     }
     .navbar {
         display: flex;
-    align-items: center; 
+    align-items: center;
     }
 </style>
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -37,6 +38,7 @@
                     clearInterval(timerInterval);
                 }
                 }).then((result) => {
+                /* Read more about handling dismissals below */
                 if (result.dismiss === Swal.DismissReason.timer) {
                     console.log("I was closed by the timer");
                 }
@@ -91,13 +93,16 @@
     <body onload="just_load()">
         
         <div class="navbar">
+            <!-- <a href="{{ url_for('home') }}" class="navbar-brand">
+                <img src="{{ url_for('static', filename='coeptechlogoblck.png')}}" alt="COEP Tech Logo" class="coep-logo">
+            </a> -->
             <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
             <a href="{{ url_for('login') }}" class="navbar-item">Login</a>
             <a href="{{ url_for('enternew') }}" class="navbar-item">Register</a>
             <a href="https://www.coeptech.ac.in/" class="navbar-item">COEP Tech</a>
             <a href="http://portal.coep.org.in:9093/" class="navbar-item">MIS</a>
             <a href="https://moodle.coep.org.in/moodle/login/index.php" class="navbar-item">Moodle</a>
-            <a href="{{ url_for('redirect') }}" class="navbar-item">Choose Venue</a>
+            <a href="{{ url_for('redirect2') }}" class="navbar-item">Choose Venue</a>
             <a href="{{ url_for('logout') }}" class="navbar-item">Logout</a>
             <!-- <a href="{{ url_for('list') }}" class="navbar-item">Review and Edit Students</a> -->
         </div>
@@ -111,11 +116,11 @@
             <div class="footer-content">
                 <!-- <p><img src="{{ url_for('static', filename='logo.png')}}" width="60" height="60">&copy; 2024</p> -->
                 <div class="top-content">
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Services</a>
-                    <a href="#" class="footer-link">Team</a>
-                    <a href="#" class="footer-link">Contact</a> 
+                    <a href="{{ url_for('home') }}" class="footer-link">Home</a>
+                    <a href="{{ url_for('home') }}" class="footer-link">About</a>
+                    <a href="{{ url_for('login') }}" class="footer-link">Services</a>
+                    <a href="{{ url_for('about') }}" class="footer-link">Team</a>
+                    <a href="{{ url_for('about') }}" class="footer-link">Contact</a> 
                 </div>
                 <div class="bottom-content">
                     <p>&copy;2024 COEP Tech | All Rights Reserved</p>

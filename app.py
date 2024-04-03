@@ -30,6 +30,14 @@ def page_not_found(e):
 def login():
     return render_template("login.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/logout", methods=['POST','GET'])
+def logout():
+    return render_template('login.html')
+
 # @app.route("/authenticate", methods=['POST', 'GET'])
 # def authenticate():
 #     if request.method == 'POST':
@@ -301,10 +309,14 @@ def delete():
 def redirect():
     return render_template('adminlogin.html')
 
+@app.route("/redirect2", methods=['POST','GET'])
+def redirect2():
+    return render_template('selectvenue.html')
 
 @app.route("/redirectvenue", methods=['POST'])
 def redirectvenue():
-    current_day = datetime.now().strftime('%A') 
+    # current_day = datetime.now().strftime('%A') 
+    current_day = request.form.get('day')
     mis = request.form.get('misno')
     selected_venue = request.form.get('venue')
     # print(selected_venue)

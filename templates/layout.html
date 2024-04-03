@@ -114,11 +114,11 @@
             <div class="footer-content">
                 <!-- <p><img src="{{ url_for('static', filename='logo.png')}}" width="60" height="60">&copy; 2024</p> -->
                 <div class="top-content">
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Services</a>
-                    <a href="#" class="footer-link">Team</a>
-                    <a href="#" class="footer-link">Contact</a> 
+                    <a href="{{ url_for('home') }}" class="footer-link">Home</a>
+                    <a href="{{ url_for('home') }}" class="footer-link">About</a>
+                    <a href="{{ url_for('login') }}" class="footer-link">Services</a>
+                    <a href="{{ url_for('about') }}" class="footer-link">Team</a>
+                    <a href="{{ url_for('about') }}" class="footer-link">Contact</a> 
                 </div>
                 <div class="bottom-content">
                     <p>&copy;2024 COEP Tech | All Rights Reserved</p>

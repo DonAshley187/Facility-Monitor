@@ -25,7 +25,7 @@
         <option value="AC_floor1">Academic Complex Building 1st Floor</option>
         <option value="AC_floor2">Academic Complex Building 2nd Floor</option>
         <option value="Auditorium">Auditorium</option>
-        <!-- <option value="parking_slot">Parking Slot</option> -->
+        <option value="parking_slot">Parking Slot</option>
     </select>
     <br><br>
     <label for="day" style="font-family: 'Archivo', sans-serif; font-weight: bold; font-size: 18px;">Choose a Venue to edit</label>

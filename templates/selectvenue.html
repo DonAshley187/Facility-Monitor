@@ -86,7 +86,50 @@
   }
 }
 
+.svenue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
 
+.content-wrapper {
+    text-align: center;
+    max-width: 1000px;
+    max-height: 1000px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust background color with transparency */
+    backdrop-filter: blur(10px); /* Add backdrop-filter for blur effect */
+    padding: 20px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+}
+
+.submit {
+        border: none;
+        outline: none;
+        background: linear-gradient(144deg, #FFA500, #FF6347 50%, #FFD700);
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        transform: .3s ease;
+        margin: 0 auto;
+      }
+      
+      .submit:hover {
+        scale: 1.05;
+        color: aliceblue;
+      }
+
+      .submit:active{
+        scale: 0.95;
+      }
+
+      .no-pks{
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px;
+      }
 </style>
 
 
@@ -179,12 +222,16 @@ input[type="radio"]{
 </style> -->
 
 
-{% extends "layout.html" %}
+{% extends "layout3.html" %}
 {% block title %}
     Select Venue
 {% endblock %}
 
 {% block content %}
+
+<div class="svenue">
+  <div class="content-wrapper">
+
 <h1>Select The Venue</h1>
 {% if error %}
     <p class="error-message">{{ error }}</p>
@@ -194,6 +241,7 @@ input[type="radio"]{
     <input type="hidden" name="misno" value="{{ mis }}">
     <label class = "venue-title">Choose a Venue</label><br>
     <div class="radio-input">
+      <div class="no-pks">  
         <input type="radio" id="venue_AC_building_1" name="venue" value="AC_building_1">
         <label for="venue_AC_building_1">Academic Complex Building Floor 1</label><br>
         
@@ -203,10 +251,43 @@ input[type="radio"]{
         <input type="radio" id="venue_Auditorium" name="venue" value="Auditorium">
         <label for="venue_Auditorium">Auditorium</label><br>
         
-        <input type="radio" id="venue_parking_slot" name="venue" value="parking_slot">
-        <label for="venue_parking_slot">Parking Slot</label><br><br>
+        <!-- <input type="radio" id="venue_parking_slot" name="venue" value="parking_slot">
+        <label for="venue_parking_slot">Parking Slot</label><br><br> -->
+      </div>    
+      </div>
+
+    <label class="venue-title">Choose a Day</label><br>
+    <div class="radio-input">
+        <input type="radio" id="Monday" name="day" value="Monday">
+        <label for="Monday">Monday</label><br>
+    
+        <input type="radio" id="Tuesday" name="day" value="Tuesday">
+        <label for="Tuesday">Tuesday</label><br>
+    
+        <input type="radio" id="Wednesday" name="day" value="Wednesday">
+        <label for="Wednesday">Wednesday</label><br>
+    
+        <input type="radio" id="Thursday" name="day" value="Thursday">
+        <label for="Thursday">Thursday</label><br>
+    
+        <input type="radio" id="Friday" name="day" value="Friday">
+        <label for="Friday">Friday</label><br>
+    
+        <input type="radio" id="Saturday" name="day" value="Saturday">
+        <label for="Saturday">Saturday</label><br>
+    
+        <input type="radio" id="Sunday" name="day" value="Sunday">
+        <label for="Sunday">Sunday</label><br>
+        <br>
     </div>
-    <input type="submit" value="Submit">
+        
+        <br><br>
+
+    
+    <input type="submit" value="Submit" style="margin-top: 30px;"
+    >
+  </div>
+</div>
 </form>
 
 {% endblock %}
