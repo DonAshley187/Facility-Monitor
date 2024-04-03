@@ -150,7 +150,7 @@ class Database:
             availability = result[0]
             return availability
         else:
-            return None  # Return None if no availability is found
+            return None
     @staticmethod
     def get_auditorium_seat_availability(seat_number, row_label, current_day):
         conn = sqlite3.connect('database.db')
@@ -439,7 +439,7 @@ def changeACdatabase():
                 start_time = time_parts[0]
                 first_number = int(start_time.split('am')[0]) if 'am' in start_time else int(start_time.split('pm')[0])
                 
-                if 'pm' in start_time and first_number != 12:  # Adjusting for 'pm' and 12pm
+                if 'pm' in start_time and first_number != 12: 
                     first_number += 12     
                 arr[first_number - 9][int(room_number)-1] = 1            
                 status = 'Occupied'
@@ -447,7 +447,6 @@ def changeACdatabase():
             for row_index, row in enumerate(arr):
                 for col_index, element in enumerate(row):
                     if element == 0:
-                        # Reconstruct time slot based on row_index
                         start_hour = row_index + 9
                         end_hour = start_hour + 1
                         
@@ -461,8 +460,8 @@ def changeACdatabase():
                         
                         time_slot = f"{start_time}-{end_time}"
                         
-                        room_number = col_index + 1  # Add 1 to convert back to room number
-                        room_id = 'r' + str(room_number + 100)  # Construct room ID
+                        room_number = col_index + 1  
+                        room_id = 'r' + str(room_number + 100)
                         Database.update_room_status(room_id, selected_day, time_slot, 1, 'Vacant')
                         # update_room_status(room_id, selected_day, time_slot, 1, 'Vacant')
 
@@ -476,7 +475,7 @@ def changeACdatabase():
                 start_time = time_parts[0]
                 first_number = int(start_time.split('am')[0]) if 'am' in start_time else int(start_time.split('pm')[0])
                 
-                if 'pm' in start_time and first_number != 12:  # Adjusting for 'pm' and 12pm
+                if 'pm' in start_time and first_number != 12:
                     first_number += 12     
                 arr[first_number - 9][int(room_number)-1] = 1            
                 status = 'Occupied'
@@ -497,8 +496,8 @@ def changeACdatabase():
                         
                         time_slot = f"{start_time}-{end_time}"
                         
-                        room_number = col_index + 1  # Add 1 to convert back to room number
-                        room_id = 'r' + str(room_number + 200)  # Construct room ID
+                        room_number = col_index + 1
+                        room_id = 'r' + str(room_number + 200)  
                         Database.update_room_status(room_id, selected_day, time_slot, 2, 'Vacant')
                         # update_room_status(room_id, selected_day, time_slot, 2, 'Vacant')
             return render_template('editAC_floor2.html', current_day=selected_day, get_room_availability=Database.get_room_availability, floor=2)
@@ -506,7 +505,7 @@ def changeACdatabase():
 @app.route("/changeAudidatabase", methods=['POST'])
 def changeAudidatabase():
     if request.method == 'POST':
-        seat_statuses = request.form.getlist('mycheckbox') # only contains the entries of the filled seats
+        seat_statuses = request.form.getlist('mycheckbox')
         current_day = request.form.get('dummy_variable')
         print(seat_statuses)
         arr = [[0] * 32 for _ in range(25)]

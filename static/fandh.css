@@ -55,7 +55,7 @@ footer {
 .footer-link {
     margin: 10px;
     font-family: 'Kanit', sans-serif;
-    color: rgb(2, 1, 104); /* Change the color to red */
+    color: rgb(2, 1, 104); 
 }
 
 .navbar {
@@ -64,9 +64,8 @@ footer {
     font-family: 'Anton', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     padding: 8px 5px 8px 5px;
-    align-items: center; /* Align text in the center */
-     /* Use flexbox layout */
-    justify-content: center; /* Center items horizontally */
+    align-items: center; 
+    justify-content: center; 
     align-items: center;
 }
 
@@ -81,7 +80,6 @@ footer {
 }
 
 .navbar-item {
-    /* font-variant: small-caps; */
     margin-left: 30px;
 }
 

@@ -113,9 +113,9 @@ button {
     border: none;
     cursor: pointer;
     width: 40%;
-    display: block; /* Change the display property to block */
-    margin-left: auto; /* Set margin-left to auto */
-    margin-right: auto; /* Set margin-right to auto */
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 button:hover {
@@ -123,7 +123,7 @@ button:hover {
 }
 
 .seat {
-    position: relative; /* Position relative for absolute positioning of seat number */
+    position: relative; 
     width: 30px;
     height: 30px;
     background-color: #e6e6e6;
@@ -142,11 +142,11 @@ button:hover {
 }
 
 .seat-number {
-    position: absolute; /* Position seat number */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering */
-    font-size: 12px; /* Adjust font size */
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px; 
 }
 
 .seat-label {
@@ -154,22 +154,22 @@ button:hover {
 }
 
 .seat:hover {
-    background-color: #d9d9d9; /* Change background color on hover */
+    background-color: #d9d9d9; 
 }
 
 .seat.selected {
-    background-color: #007bff; /* Background color when seat is selected */
-    border-color: #0056b3; /* Border color when seat is selected */
-    color: #fff; /* Text color when seat is selected */
+    background-color: #007bff; 
+    border-color: #0056b3; 
+    color: #fff; 
 }
 
 .passage {
-    width: 50px; /* Adjust width as needed */
+    width: 50px; 
     flex: 0 0 auto;
 }
 
 .passage2 {
-    width: 5px; /* Adjust width as needed */
+    width: 5px; 
     flex: 0 0 auto;
 }
 
