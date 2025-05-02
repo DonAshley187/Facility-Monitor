@@ -1,17 +1,25 @@
 <style>
 
+  .ashley{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+    }
+
     .form {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        max-width: 500px;
-        background-color: #fff;
         padding: 20px;
         border-radius: 20px;
         position: relative;
-        margin: auto; 
-        margin-top: 10vh;
-      }
+        margin: auto;
+        text-align: center;
+        max-width: 800px;
+        backdrop-filter: blur(10px); /* Add backdrop-filter for blur effect */
+        background-color: rgba(255, 255, 255, 0.5); /* Adjust background color with transparency */
+    }
       
       .title {
         font-size: 28px;
@@ -62,6 +70,18 @@
       .signin a:hover {
         text-decoration: underline rgb(7, 131, 255);
       }
+
+    .signup {
+      text-align: center;
+    }
+  
+    .signup a {
+      color: dodgerblue;
+    }
+  
+    .signup a:hover {
+      text-decoration: underline dodgerblue;
+    }
       
       .flex {
         display: flex;
@@ -119,7 +139,12 @@
       }
       
       .submit:hover {
+        scale: 1.05;
         background-color: rgb(7, 131, 255);
+      }
+
+      .submit:active{
+        scale:0.95;
       }
       
       @keyframes pulse {
@@ -143,7 +168,8 @@
 Login Page
 {% endblock %}
 {% block content %}
-<form class="form" action="{{ url_for('authenticate') }}" method="POST">
+<div class="ashley">
+  <form class="form" action="{{ url_for('authenticate') }}" method="POST">
     <p class="title">Login </p>
     {% if error %}
         <p class="error-message">{{ error }}</p>
@@ -170,7 +196,10 @@ Login Page
         <span>Password</span>
     </label>
     <button class="submit">Submit</button>
+    <p class="signup">Don't have an acount? <a href="/register" style="text-decoration: none;">Sign-up</a>
+    </p>
 </form>
+</div>
 {% endblock %}
 
 <!-- <form action="{{ url_for('authenticate') }}" style="padding-top: 1%;" method="POST">

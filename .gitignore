@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+env/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+*.db
+
+# PDFs
+*.pdf
+
+# Temporary/debug files
+temp/
+temp.py
+test.py
+tempadminlogin/
+Experimentation/
+
+# System files
+.DS_Store
+

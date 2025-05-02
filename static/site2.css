@@ -1,0 +1,490 @@
+
+/*.checkbox {
+    appearance: none;
+    overflow: hidden;
+    width: 130px; /* Change width to 130px */
+    /*height: 30px; /* Change height to 30px */
+    /*aspect-ratio: 1/1;
+    border-radius: 100% 0% 100% 0% / 0% 100% 0% 100%;
+    border: 2px solid rgb(0, 102, 255); /* Change border color to blue */
+   /* position: relative;
+    transition: all 0.2s ease-in-out;
+}
+  
+.checkbox::before {
+position: absolute;
+inset: 0;
+content: "";
+font-size: 35px;
+width: 100%; /* Adjust to fill the entire space */
+/*height: 100%; /* Adjust to fill the entire space */
+/*transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked {
+border: 2px solid rgb(173, 216, 230); /* Change border color to a light blue */
+/*background: linear-gradient(135deg, rgb(173, 216, 230) 0%, rgb(0, 102, 255) 100%); /* Adjust gradient colors */
+/*box-shadow: -2px -2px 20px rgba(173, 216, 230, 1), 2px 2px 20px rgba(0, 102, 255, 1); /* Adjust shadow colors and width */
+
+
+/*.checkbox:checked::before {
+background: linear-gradient(135deg, rgb(173, 216, 230) 0%, rgb(0, 102, 255) 100%); /* Adjust gradient colors */
+
+
+
+.seat {
+    position: relative; /* Position relative for absolute positioning of seat number */
+    width: 30px;
+    height: 30px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.seat-number {
+    position: absolute; /* Position seat number */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering */
+    font-size: 12px; /* Adjust font size */
+}
+
+.seat-label {
+    margin-right: 10px;
+}
+
+.seat:hover {
+    background-color: #d9d9d9; /* Change background color on hover */
+}
+
+.seat.selected {
+    background-color: #007bff; /* Background color when seat is selected */
+    border-color: #0056b3; /* Border color when seat is selected */
+    color: #fff; /* Text color when seat is selected */
+}
+
+.passage {
+    width: 50px; /* Adjust width as needed */
+    flex: 0 0 auto;
+}
+
+.passage2 {
+    width: 5px; /* Adjust width as needed */
+    flex: 0 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/*.login-signup-container {
+    display: flex;
+    justify-content: center; /* Align horizontally at the center */
+    /*align-items: center; /* Align vertically at the center */
+    /*height: 80vh; /* Make the container take up the full viewport height */
+
+
+/*.login-signup-container .container p a {
+    color: orange;
+}
+
+.login-signup-container .container p a:hover {
+    color: orangered; /* Set the color to black on hover */
+
+
+/*.container {
+    text-align: center;
+    max-width: 450px;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgb(244, 247, 251) 100%
+    );
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(221, 135, 95, 0.878) 0px 20px 10px -15px;
+    margin: 20px;
+  }
+  
+  .heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: orange;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form .input {
+    width: 80%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #ffe6cf 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input::placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input:focus {
+    outline: none;
+    border-inline: 2px solid orange;
+  }
+  
+  .form .login-button {
+    width: 80%;
+    font-weight: bold;
+    background: linear-gradient(
+      45deg,
+        orange 0%,
+       orangered 100%
+    );
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(221, 135, 95, 0.878) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form .login-button:hover {
+    color: aliceblue;
+    transform: scale(1.03);
+  }
+  
+  .form .login-button:active {
+    color: aliceblue;
+    transform: scale(0.95);
+  }
+  
+  .agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .agreement a {
+    text-decoration: none;
+    color: orangered;
+    font-size: 9px;
+  }
+
+.container p {
+    font-size: 0.9em;
+    color: rgb(255, 145, 0);
+}
+
+/* You can add more styles as needed for specific elements inside the signup container */
+
+ /* Add styles for the select box */
+/*.select-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /* Adjust the width as needed */
+    /*box-sizing: border-box;
+    appearance: none; /* Remove default dropdown arrow */
+    /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z" fill="black"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Style the dropdown arrow */
+/*.select-box::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+
+
+/* Style the options */
+/*.select-box option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+.plan-option {
+    margin-top: 1rem;
+    margin-bottom: 15px;
+  }
+ 
+  .plan-option label {
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid rgba(229, 231, 235, 1);
+    border-radius: 0.375rem;
+    background-color: rgba(249, 250, 251, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .4rem;
+    margin: 10px 0;
+    transform: all .15s ease;
+  }
+  
+  .plan-option label .plan-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: url('coep-old.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+a:hover{
+    background-color: rgba(0, 174, 255, 0.986);
+    padding: 0.5rem 0.75rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    /*font-size: 0.8rem;*/
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem ;   
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color:aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: rgba(0, 174, 255, 0.986);
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: aliceblue;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999; 
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li {
+    text-align: center; /* Center align menu items */
+    padding: 10px 0; /* Add padding to menu items */
+    border-bottom: 1px solid #ddd; /* Add border between menu items */
+    list-style-type: none; /* Remove default list style */
+    margin: 0; /* Remove default margin */
+}
+
+.dropdown_menu li:last-child {
+    border-bottom: none; /* Remove border from last menu item */
+}
+.dropdown_menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown_menu li a:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+.dropdown_menu .action_btn {
+    text-align: center; /* Center align action button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    display: block;
+}
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display:none;
+    }
+
+    .navbar .toggle_btn{
+        display: inline-block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    gap: 20px; /* Adjust the gap between cards */
+}
+
+.card {
+    width: 240px;
+    height: 300px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    animation: fadeInAnimation 2s; /* Change the animation name */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Adjust the value to control the jump height */
+}
+.card-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(144deg, #FFA500, #FF6347 50%, #FFD700);
+}
+
+.card-info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1.7rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.card-text p {
+    line-height: 140%;
+    white-space: nowrap;
+}
+
+.text-title {
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: rgb(255, 255, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-subtitle {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card:hover .card-icon {
+    opacity: 1;
+    transform: translateX(20%);
+}
+
+.card img {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: auto; /* Allows the image to maintain its aspect ratio */
+  }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+

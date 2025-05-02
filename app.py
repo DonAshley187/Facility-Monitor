@@ -429,7 +429,7 @@ def editvenue():
     elif selected_venue == 'AC_floor2':
         return render_template('editAC_floor2.html', current_day=current_day, get_room_availability=Database.get_room_availability, floor=2)
     else: 
-        return render_template('selectvenue.html')
+        return render_template('adminlogin.html')
     
 
 @app.route("/changeACdatabase", methods=['POST'])
