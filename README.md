@@ -16,20 +16,20 @@
 git clone https://github.com/DonAshley187/Facility-Monitor.git
 cd Facility-Monitor
 
-#Packages installation
-pip install Flask
-pip install flask-qrcode
-pip install werkzeug
-pip install pdfkit
-
 # Create virtual environment
-python -m venv venv
+python3 -m venv venv
 
 # Activate (Windows)
 venv\Scripts\activate
 
 # Activate (macOS/Linux)
-source venv/bin/activate
+source venv/bin/activate4
+
+#Packages installation
+pip install Flask
+pip install flask-qrcode
+pip install werkzeug
+pip install pdfkit
 
 # macOS/Linux
 export FLASK_APP=app.py
