@@ -11,7 +11,6 @@
 
 ## Steps to Run
 
-1. **Clone the repository (if not already)**
 ```bash
 git clone https://github.com/DonAshley187/Facility-Monitor.git
 cd Facility-Monitor
